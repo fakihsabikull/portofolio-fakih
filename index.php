@@ -28,6 +28,7 @@ $body = "Nama: $name\nEmail: $email\nPesan:\n$message";
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/assets/img/logo2.png">
 
 </head>
 
@@ -55,7 +56,7 @@ web development dan tertarik membangun aplikasi berbasis web.
 Let's Connect
 </a>
 
-<a href="assets/cv-fakih.pdf" class="btn btn-outline-light mt-3" download>
+<a href="assets/assets/cv-fakih.pdf" class="btn btn-outline-light mt-3" download>
 Download CV
 </a>
 
