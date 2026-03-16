@@ -51,8 +51,12 @@ Saya siswa Rekayasa Perangkat Lunak yang sedang belajar
 web development dan tertarik membangun aplikasi berbasis web.
 </p>
 
-<a href="#contact" class="btn btn-dark mt-3">
+<a href="#contact" class="btn btn-dark mt-3 me-2">
 Let's Connect
+</a>
+
+<a href="assets/cv-fakih.pdf" class="btn btn-outline-light mt-3" download>
+Download CV
 </a>
 
 </div>
@@ -60,7 +64,7 @@ Let's Connect
 <div class="col-md-6 text-center">
 
 <div class="profile-wrapper">
-<img src="assets/img/im2.png" class="profile-img">
+<img src="assets/assets/img/im2.png" class="profile-img">
 </div>
 
 </div>
