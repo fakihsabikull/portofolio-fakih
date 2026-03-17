@@ -197,6 +197,73 @@ yang lebih terstruktur dan efisien.
 </div>
 </section>
 
+<section id="projects" class="py-5 reveal">
+<div class="container">
+
+<h2 class="mb-5 section-title">Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="project-card">
+<h5>Website Perpustakaan</h5>
+<p>Aplikasi CRUD buku dengan PHP & MySQL.</p>
+<button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#project1">
+<i class="bi bi-box-arrow-up-right"></i> View
+</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="project-card">
+<h5>Portfolio Website</h5>
+<p>Website personal menggunakan Bootstrap.</p>
+<button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#project1">
+<i class="bi bi-box-arrow-up-right"></i> View
+</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="project-card">
+<h5>Simple Login System</h5>
+<p>Sistem login sederhana dengan session PHP.</p>
+<button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#project1">
+<i class="bi bi-box-arrow-up-right"></i> View
+</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="modal fade" id="project1" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content bg-dark text-light">
+
+<div class="modal-header border-0">
+<h5 class="modal-title">Website Perpustakaan</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<p>
+Aplikasi CRUD sederhana menggunakan PHP & MySQL, 
+fitur tambah, edit, hapus buku, dan login admin.
+</p>
+</div>
+
+<div class="modal-footer border-0">
+<a href="#" class="btn btn-primary">Live Demo</a>
+<a href="#" class="btn btn-outline-light">Source Code</a>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
 <section id="contact" class="py-5 reveal">
 <div class="container">
 
@@ -260,120 +327,7 @@ boleh banget hubungi saya lewat form ini.
 <i class="bi bi-arrow-up"></i>
 </button>
 
-<script>
-
-window.addEventListener("scroll", function(){
-
-let skills = document.querySelector("#skills");
-let bars = document.querySelectorAll(".skill-bar");
-
-let position = skills.getBoundingClientRect().top;
-let screen = window.innerHeight;
-
-if(position < screen){
-
-bars.forEach(bar=>{
-bar.style.width = bar.classList[1].replace("skill-","");
-});
-
-}
-
-});
-
-window.addEventListener("scroll", function(){
-
-let navbar = document.querySelector(".navbar");
-
-if(window.scrollY > 50){
-navbar.classList.add("navbar-scrolled");
-}else{
-navbar.classList.remove("navbar-scrolled");
-}
-
-});
-
-
-window.addEventListener("scroll", function(){
-
-let reveals = document.querySelectorAll(".reveal");
-
-for(let i = 0; i < reveals.length; i++){
-
-let windowHeight = window.innerHeight;
-let elementTop = reveals[i].getBoundingClientRect().top;
-let elementVisible = 100;
-
-if(elementTop < windowHeight - elementVisible){
-reveals[i].classList.add("active");
-}
-
-}
-
-});
-
-let topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", function(){
-
-if(window.scrollY > 300){
-topBtn.style.display = "flex";
-}else{
-topBtn.style.display = "none";
-}
-
-});
-
-topBtn.onclick = function(){
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-};
-
-let text = "Hi, I'm Fakih";
-let i = 0;
-
-function typing(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing, 80);
-}
-}
-
-typing();   
-
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-
-let current = "";
-
-sections.forEach(section => {
-
-const sectionTop = section.offsetTop - 200;
-const sectionHeight = section.clientHeight;
-
-if(scrollY >= sectionTop){
-current = section.getAttribute("id");
-}
-
-});
-
-navLinks.forEach(link => {
-
-link.classList.remove("active");
-
-if(link.getAttribute("href") == "#" + current){
-link.classList.add("active");
-}
-
-});
-
-});
-</script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

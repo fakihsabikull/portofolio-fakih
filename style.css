@@ -4,6 +4,7 @@ color:#e5e7eb;
 font-family:system-ui;
 }
 
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -25,6 +26,7 @@ p{
 color:#9ca3af;
 }
 
+/* BUTTON */
 .btn-dark{
 background:#38bdf8;
 border:none;
@@ -36,19 +38,7 @@ font-weight:600;
 background:#0ea5e9;
 }
 
-.profile-img{
-width:260px;
-height:260px;
-border-radius:50%;
-object-fit:cover;
-display:block;
-}
-
-.profile-img:hover{
-transform:scale(1.05);
-box-shadow:0 15px 40px rgba(56,189,248,0.4);
-}
-
+/* PROFILE */
 .profile-wrapper{
 display:inline-block;
 padding:6px;
@@ -56,6 +46,21 @@ border-radius:50%;
 background:linear-gradient(135deg,#38bdf8,#6366f1);
 }
 
+.profile-img{
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+transition:0.3s;
+}
+
+.profile-img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(56,189,248,0.4);
+}
+
+/* ABOUT */
 .about-box{
 background:#111827;
 padding:30px;
@@ -70,9 +75,10 @@ color:#9ca3af;
 #about{
 padding-top:120px;
 padding-bottom:80px;
-margin-top: 60px;
+margin-top:60px;
 }
 
+/* SKILLS */
 .progress{
 height:10px;
 background:#1f2937;
@@ -81,15 +87,16 @@ background:#1f2937;
 .progress-bar{
 width:0;
 transition:width 1.5s ease;
+background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+box-shadow:0 0 10px rgba(56,189,248,0.5);
 }
 
-.skill-html{width:90%;}
-.skill-css{width:80%;}
-.skill-js{width:30%;}
-.skill-php{width:60%;}
-.skill-mysql{width:60%;}
-.skill-git{width:55%;}
+#skills span{
+font-size:14px;
+color:#9ca3af;
+}
 
+/* FORM */
 form input, form textarea{
 background:#111827;
 border:none;
@@ -101,6 +108,7 @@ form textarea::placeholder{
 color:#6b7280;
 }
 
+/* SOCIAL ICON */
 .social-icons{
 display:flex;
 gap:25px;
@@ -118,16 +126,20 @@ color:#38bdf8;
 transform:scale(1.2);
 }
 
+/* SECTION */
 section{
 scroll-margin-top:80px;
 }
 
+/* NAVBAR */
 .navbar{
-transition:0.3s;
+transition:all 0.3s ease;
+z-index: 1000;
 }
 
-.navbar-scrolled{
-background:#0f172a !important;
+.navbar.scrolled{
+background:rgba(0,0,0,0.7) !important;
+backdrop-filter:blur(10px);
 box-shadow:0 4px 20px rgba(0,0,0,0.3);
 }
 
@@ -136,17 +148,38 @@ color:#38bdf8 !important;
 font-weight:600;
 }
 
+/* NAVBAR ANIMATION */
+.navbar-nav .nav-link{
+position:relative;
+transition:0.3s;
+}
+
+.navbar-nav .nav-link::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:linear-gradient(90deg,#0d6efd,#00c6ff);
+transition:0.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after{
+width:100%;
+}
+
+/* REVEAL ANIMATION */
 .reveal{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
+pointer-events: none;
 }
 
 .reveal.active{
-opacity:1;
-transform:translateY(0);
+pointer-events: auto;
 }
 
+/* BACK TO TOP */
 #topBtn{
 position:fixed;
 bottom:30px;
@@ -171,6 +204,7 @@ transform:scale(1.1);
 background:#1e293b;
 }
 
+/* CURSOR TEXT */
 .cursor{
 animation:blink 1s infinite;
 }
@@ -181,6 +215,7 @@ animation:blink 1s infinite;
 100%{opacity:1;}
 }
 
+/* SECTION TITLE */
 .section-title{
 position:relative;
 display:inline-block;
@@ -202,11 +237,7 @@ transition:0.4s;
 width:100%;
 }
 
-#skills span{
-font-size:14px;
-color:#9ca3af;
-}
-
+/* BUTTON HOVER */
 .btn{
 transition:all 0.3s ease;
 }
@@ -214,4 +245,61 @@ transition:all 0.3s ease;
 .btn:hover{
 transform:translateY(-2px);
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.project-card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+height:100%;
+}
+
+.project-card h5{
+margin-bottom:10px;
+}
+
+.project-card p{
+font-size:14px;
+color:#9ca3af;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+border:1px solid rgba(56,189,248,0.3);
+}
+
+.modal-content{
+border-radius:12px;
+}
+
+.modal-body p{
+color:#9ca3af;
+}
+
+.modal{
+z-index: 9999 !important;
+}
+
+.modal-backdrop{
+z-index: 9998 !important;
+}
+
+.modal-dialog{
+pointer-events: auto;
+}
+
+.modal,
+.modal *{
+pointer-events: auto !important;
+}
+
+.modal-backdrop{
+pointer-events: none !important;
+}
+
+body.modal-open{
+overflow: hidden;
+padding-right: 0 !important;
 }
